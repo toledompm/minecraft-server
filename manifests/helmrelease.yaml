@@ -30,3 +30,7 @@ spec:
       command: ["true"]
     readinessProbe:
       command: ["true"]
+    persistence:
+      dataDir:
+        enabled: true
+        Size: 5Gi
