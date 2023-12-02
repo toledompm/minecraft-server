@@ -26,5 +26,7 @@ spec:
     workloadAsStatefulSet: true
     strategyType: RollingUpdate
     version: 1.20.2
-    livenessProbe: {}
-    readinessProbe: {}
+    livenessProbe:
+      initialDelaySeconds: 300
+    readinessProbe:
+      initialDelaySeconds: 300
