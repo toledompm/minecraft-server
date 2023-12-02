@@ -27,6 +27,6 @@ spec:
     strategyType: RollingUpdate
     version: 1.20.2
     livenessProbe:
-      command: ["exit", "0"]
+      command: ["true"]
     readinessProbe:
-      command: ["exit", "0"]
+      command: ["true"]
