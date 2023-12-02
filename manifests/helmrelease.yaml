@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: post-api
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: minecraft
+      version: "4.12.0"
+      sourceRef:
+        kind: HelmRepository
+        name: minecraft-server-charts
+      interval: 1m
+  upgrade:
+    remediation:
+      remediateLastFailure: true
+  values:
+    image:
+      repository: itzg/minecraft-server
+      tag: 2023.11.1-java21-alpine
+    minecraftServer:
+      eula: true
+    workloadAsStatefulSet: true
+    strategyType: RollingUpdate
+    version: 1.20.2
+    onlineMode: false
