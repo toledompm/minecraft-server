@@ -22,6 +22,9 @@ spec:
     minecraftServer:
       eula: true
       serviceType: LoadBalancer
+      serviceAnnotations:
+        external-dns.alpha.kubernetes.io/hostname: mc.toledompm.xyz
+        external-dns.alpha.kubernetes.io/target: cluster.toledompm.xyz
     workloadAsStatefulSet: true
     strategyType: RollingUpdate
     version: 1.20.2
