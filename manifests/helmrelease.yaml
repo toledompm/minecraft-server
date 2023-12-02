@@ -21,10 +21,10 @@ spec:
       tag: latest
     minecraftServer:
       eula: true
+      serviceType: LoadBalancer
     workloadAsStatefulSet: true
     strategyType: RollingUpdate
     version: 1.20.2
     onlineMode: false
     livenessProbe: {}
     readinessProbe: {}
-    serviceType: LoadBalancer
