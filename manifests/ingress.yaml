@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: mc.toledompm.xyz
+    external-dns.alpha.kubernetes.io/target: cluster.toledompm.xyz
+  labels:
+    app: mc-server
+    app.kubernetes.io/managed-by: Helm
+  name: mc-server
+spec:
+  ingressClassName: traefik
+  rules:
+  - host: mc.toledompm.xyz
+    http:
+      paths:
+      - backend:
+          service:
+            name: mc-server-minecraft
+            port:
+              name: minecraft
+        path: /
+        pathType: Prefix

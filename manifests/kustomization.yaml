@@ -4,3 +4,4 @@ namespace: mc-server
 resources:
 - helmrelease.yaml
 - helmrepository.yaml
+- ingress.yaml
