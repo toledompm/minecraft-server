@@ -27,8 +27,6 @@ spec:
     strategyType: RollingUpdate
     version: 1.20.2
     livenessProbe:
-      command: ["echo", "hello"]
-      initialDelaySeconds: 300
+      command: ["exit", "0"]
     readinessProbe:
-      command: ["echo", "hello"]
-      initialDelaySeconds: 300
+      command: ["exit", "0"]
