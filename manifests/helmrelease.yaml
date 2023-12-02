@@ -18,7 +18,7 @@ spec:
   values:
     image:
       repository: itzg/minecraft-server
-      tag: 2023.11.1-java21-alpine
+      tag: latest
     minecraftServer:
       eula: true
     workloadAsStatefulSet: true
