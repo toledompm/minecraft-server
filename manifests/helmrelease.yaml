@@ -27,3 +27,4 @@ spec:
     onlineMode: false
     livenessProbe: {}
     readinessProbe: {}
+    serviceType: LoadBalancer
