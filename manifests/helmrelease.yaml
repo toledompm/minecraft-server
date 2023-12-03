@@ -23,6 +23,9 @@ spec:
       eula: true
       serviceType: LoadBalancer
       onlineMode: false
+      rcon:
+        enabled: true
+        withGeneratedPassword: true
     workloadAsStatefulSet: true
     strategyType: RollingUpdate
     version: 1.20.2
