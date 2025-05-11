@@ -7,7 +7,7 @@ spec:
   chart:
     spec:
       chart: minecraft
-      version: "4.12.0"
+      version: "4.26.3"
       sourceRef:
         kind: HelmRepository
         name: minecraft-server-charts
@@ -28,7 +28,7 @@ spec:
         withGeneratedPassword: true
     workloadAsStatefulSet: true
     strategyType: RollingUpdate
-    version: 1.20.2
+    version: 1.21.5
     livenessProbe:
       command: ["true"]
     readinessProbe:
